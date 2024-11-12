@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Months ho bhi gaye</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#photos">Photos</a>
+                <a href="#letter">Letter</a>
+                <a href="#reasons">Reasons</a>
+            </div>
+        </header>
+
+        <!-- Home Page (Hero Section) -->
+        <div id="home" class="home-page">
+            <div class="overlay">
+                <h1>Happy 4 Months Together!</h1>
+                <p class="subheading">Every moment with you is my favorite</p>
+            </div>
+            <div class="floating-hearts">
+                <div class="heart" style="animation-delay: 0s;">❤️</div>
+                <div class="heart" style="animation-delay: 2s;">❤️</div>
+                <div class="heart" style="animation-delay: 4s;">❤️</div>
+                <div class="heart" style="animation-delay: 6s;">❤️</div>
+            </div>
+            
+        </div>
+
+        <!-- Photos Section -->
+        <section id="photos" class="empty-page">
+            <h2>Photos</h2>
+            <div class="photo-grid">
+                <!-- Photo Thumbnails -->
+                <div class="photo-item" onclick="openLightbox(0)">
+                    <img src="photo1.jpg" alt="Photo 1">
+                </div>
+                <div class="photo-item" onclick="openLightbox(1)">
+                    <img src="photo2.jpg" alt="Photo 2">
+                </div>
+                <div class="photo-item" onclick="openLightbox(2)">
+                    <img src="photo3.jpg" alt="Photo 3">
+                </div>
+                <div class="photo-item" onclick="openLightbox(3)">
+                    <img src="photo4.jpg" alt="Photo 4">
+                </div>
+                <div class="photo-item" onclick="openLightbox(4)">
+                    <img src="photo5.jpg" alt="Photo 5">
+                </div>
+                <div class="photo-item" onclick="openLightbox(5)">
+                    <img src="photo6.jpg" alt="Photo 6">
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()">×</span>
+                <img id="lightbox-image" src="" alt="Lightbox Image">
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+<section id="letter" class="empty-page">
+    <h2>Letter</h2>
+    <p class="letter-content">
+        Dear <span class="smaller-font">shortie</span>,<br><br>
+        Letter likhna toh ata nahi hai par abhi try karleta hu<br><br>
+        Kitne kuch 4 mahine hue hai hume, itne jaldi time kaha chala jata hai kya malum abh toh addat hogayi hai, tere bina pata nahi kya hoga mera <br><br>
+        Par maza toh bhot aya tere saath itne time mai best was toh navratri wala din,muje toh pura time udr hi rehna tha kar sakte the ditch 😭 mast seeing you get ready and mast giving you kisses😏 kya pata wapis kab hoga par kn aur bhot time hai humare pass thodi hi tuje ase hi jane duga abh 4 mahine hue aur 4 mahine honge ❤️ oh ha aur tanktops phena kar aur tuje dekha ussdin fir abhi tak nikal hi nahi raha dimag se log toh kuch bhi bolte rehte hai idc muje toh sexy hi lagti hai tu<br><br>
+        I love you Saachi 😏😘<br><br>
+        With love,<br>
+        Your BHUDDHA
+    </p>
+</section>
+
+        <section id="reasons" class="empty-page">
+            <h2>Reasons</h2>
+            <p>Dekh time nahi tha i was gonna do full naye quotes aye every time <br><br>
+               par humara anivarsary nikal gaya abhi toh bhot time hogaya sorry itna time laga 😭🙏🏻 thoda time de karduga </p>
+        </section>
+    </div>
+
+    <!-- Link to script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
