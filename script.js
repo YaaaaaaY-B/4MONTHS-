@@ -10,12 +10,12 @@ const spinMessages = [
     "Photo bhooth jaenge tu bas date bol",
     "Hug ya kiss tu bol karna toh hai dono mai se eak",
     "tu jo bolegi woh karuga pura din Kuch bhi 😏"
-
 ];
+
 // Function to toggle the navigation menu on mobile
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('open'); // Toggles the "open" class
+    navLinks.classList.toggle('open');
 }
 
 // Function to handle the bottle spin
@@ -53,24 +53,57 @@ function openLightbox(index) {
     const lightboxImage = document.getElementById("lightbox-image");
     const images = document.querySelectorAll(".photo-item img");
 
-    lightbox.style.display = "block";
+    lightbox.style.display = "flex";
+    lightbox.style.opacity = 0;
+    setTimeout(() => {
+        lightbox.style.opacity = 1; // Fade in effect
+    }, 10);
+
     lightboxImage.src = images[index].src;
+
+    // Store the index for navigation
+    lightbox.dataset.index = index;
 }
 
 // Function to close the lightbox
 function closeLightbox() {
     const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none";
+    lightbox.style.opacity = 0; // Fade out effect
+    setTimeout(() => {
+        lightbox.style.display = "none";
+    }, 300); // Wait for the fade-out to finish
 }
 
-// Function to change the lightbox image
+// Function to change the lightbox image (Previous/Next)
 function changeImage(direction) {
+    const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
     const images = document.querySelectorAll(".photo-item img");
-    let currentIndex = Array.from(images).findIndex(img => img.src === lightboxImage.src);
-    currentIndex = (currentIndex + direction + images.length) % images.length;
+    let currentIndex = parseInt(lightbox.dataset.index, 10);
+
+    currentIndex = (currentIndex + direction + images.length) % images.length; // Wrap around to handle array bounds
     lightboxImage.src = images[currentIndex].src;
+
+    // Update the current index in the lightbox's data attribute
+    lightbox.dataset.index = currentIndex;
 }
+
+// Event listeners for arrows
+document.querySelector('.left-arrow').addEventListener('click', (event) => {
+    event.stopPropagation();  // Prevent closing the lightbox
+    changeImage(-1);
+});
+document.querySelector('.right-arrow').addEventListener('click', (event) => {
+    event.stopPropagation();  // Prevent closing the lightbox
+    changeImage(1);
+});
+
+// Event listener for closing the lightbox when clicking outside the image
+document.getElementById("lightbox").addEventListener("click", (event) => {
+    if (event.target === document.getElementById("lightbox")) {
+        closeLightbox();
+    }
+});
 
 // Intersection Observer for animations
 const observer = new IntersectionObserver(entries => {
