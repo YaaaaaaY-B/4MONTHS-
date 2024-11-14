@@ -98,3 +98,16 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('.empty-page').forEach(section => observer.observe(section));
+
+// Hide the loading screen once the page has loaded, keeping it visible for 2 seconds
+window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    if (loadingScreen) {
+        setTimeout(() => {
+            loadingScreen.classList.add("hide"); // Add fade-out effect
+        }, 2000); // Wait 2 seconds before starting the fade-out
+    }
+});
+
+
+
