@@ -32,6 +32,61 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
+
+
+/* Loading Screen Styling */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey border */
+    border-top: 8px solid #3498db; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+}
+
+/* Spinner rotation animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Loading text styling */
+#loading-screen p {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Fade out and hide after 2 seconds */
+#loading-screen.hide {
+    opacity: 0;
+    pointer-events: none; /* Disable interactions while the loading screen is fading out */
+    transition: opacity 0.3s ease;
+}
+
+
+
 /* ------------------------------ HEADER STYLES ------------------------------ */
 header {
     background-color: #4C8C6E;
