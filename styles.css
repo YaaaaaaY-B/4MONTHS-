@@ -1,12 +1,18 @@
 /* ------------------------------ GENERAL STYLES ------------------------------ */
+/* General styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Use Poppins font across the website */
+    font-family: 'Poppins', sans-serif;
 }
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2D4F39;
+    color: #fff;
 }
 
 body {
@@ -28,23 +34,47 @@ body {
 
 /* ------------------------------ HEADER STYLES ------------------------------ */
 header {
-    background-color: #4C8C6E; /* Subtle green for header */
+    background-color: #4C8C6E;
     padding: 1rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
 }
 
-/* Navigation links */
 .nav a {
-    color: #fff; /* White text for nav links */
+    color: #fff;
     text-decoration: none;
     margin: 0 20px;
     font-size: 1.2rem;
     font-weight: 600;
-    transition: color 0.3s ease; /* Smooth hover effect */
+}
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4C8C6E;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
 }
 
 /* Hover effect for navigation links */
@@ -54,17 +84,15 @@ header {
 
 /* ------------------------------ HOME PAGE (HERO SECTION) ------------------------------ */
 .home-page {
-    height: 100vh; /* Full screen height */
-    background-image: url('your-image.jpg'); /* Replace with your image */
+    height: 100vh;
+    background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInPage 1.5s ease-out; /* Animation when page loads */
     color: #fff;
-    text-align: center;
 }
 
 /* Overlay with gradient */

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 Months Together</title>
+    <title>4 Mahine ho bhi gaye😭</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,11 +18,10 @@
                     <a href="#home">Home</a>
                     <a href="#photos">Photos</a>
                     <a href="#letter">Letter</a>
-                    <a href="#reasons">Reasons</a>
+                    <a href="#spin-the-bottle">Spin</a>
                 </div>
             </div>
         </header>
-        
 
         <!-- Scroll to Top Button -->
         <button id="scrollToTop" onclick="scrollToTop()">↑</button>
@@ -44,7 +44,6 @@
         <section id="photos" class="empty-page">
             <h2>Photos</h2>
             <div class="photo-grid">
-                <!-- Photo Thumbnails -->
                 <div class="photo-item" onclick="openLightbox(0)">
                     <img src="photo1.jpg" alt="Photo 1">
                 </div>
@@ -65,26 +64,23 @@
                 </div>
             </div>
         </section>
-  
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span id="close" class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-image" src="" alt="Lightbox Image" />
-    <span class="arrow left-arrow" onclick="changeImage(-1)">&lt;</span>
-    <span class="arrow right-arrow" onclick="changeImage(1)">&gt;</span>
-</div>
-
-
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span id="close" class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" src="" alt="Lightbox Image" />
+            <span class="arrow left-arrow" onclick="changeImage(-1)">&lt;</span>
+            <span class="arrow right-arrow" onclick="changeImage(1)">&gt;</span>
+        </div>
 
         <!-- Letter Section -->
         <section id="letter" class="empty-page">
             <h2>Letter</h2>
             <p class="letter-content">
                 Dear <span class="smaller-font">shortie</span>,<br><br>
-                Letter likhna toh ata nahi hai par abhi try karleta hu<br><br>
-                Kitne kuch 4 mahine hue hai hume, itne jaldi time kaha chala jata hai kya malum abh toh addat hogayi hai, tere bina pata nahi kya hoga mera <br><br>
-                Par maza toh bhot aya tere saath itne time mai best was toh navratri wala din,muje toh pura time udr hi rehna tha kar sakte the ditch 😭 mast seeing you get ready and mast giving you kisses😏 kya pata wapis kab hoga par kn aur bhot time hai humare pass thodi hi tuje ase hi jane duga abh 4 mahine hue aur 4 mahine honge ❤️ oh ha aur tanktops phena kar aur tuje dekha ussdin fir abhi tak nikal hi nahi raha dimag se log toh kuch bhi bolte rehte hai idc muje toh sexy hi lagti hai tu<br><br>
+                Letter likhna toh ata nahi hai par abhi try kar leta hu<br><br>
+                Kitne kuch 4 mahine hue hai hume, itne jaldi time kaha chala jata hai kya malum abh toh addat hogayi hai, tere bina pata nahi kya hoga mera<br><br>
+                Par maza toh bhot aya tere saath itne time mai, best was toh navratri wala din, mujhe toh pura time udar hi rehna tha kar sakte the ditch 😭 mast seeing you get ready and mast giving you kisses😏 kya pata wapis kab hoga par kn aur bhot time hai humare pass thodi hi tuje ase hi jane duga abh 4 mahine hue aur 4 mahine honge ❤️ oh ha aur tanktops phena kar aur tuje dekha uss din fir abhi tak nikal hi nahi raha dimag se log toh kuch bhi bolte rehte hai idc muje toh sexy hi lagti hai tu<br><br>
                 I love you Saachi 😏😘<br><br>
                 With love,<br>
                 Your BHUDDHA
@@ -95,11 +91,10 @@
         <section id="spin-the-bottle" class="empty-page">
             <h2>Spin the Bottle</h2>
             <div class="bottle-container">
-                <img src="Bottle.png" alt="Bottle" class="bottle" onclick="spinBottle()">
+                <img src="bottle.png" alt="Bottle" class="bottle" onclick="spinBottle()">
             </div>
             <p id="spin-message" class="spin-message">Click the bottle to reveal a surprise!</p>
         </section>
-
     </div>
 
     <!-- Link to script.js -->
